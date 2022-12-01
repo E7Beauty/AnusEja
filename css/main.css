@@ -1,0 +1,213 @@
+body {
+	padding: 0px;
+	margin: 0px;
+	font-family: "Raleway", sans-serif;
+	font-size: 30px;
+	color: #fff;
+	text-shadow: 1px 1px 1px #000;
+}
+
+header {
+	font-size: 30px;
+	display: flex;
+	background-image: url("../img/phon1.jpg");
+	background-size: cover;
+}
+
+.container {
+	width: 1200px;
+	margin: 0 auto;
+	padding: 0 auto;
+}
+
+.menu1 {
+	padding: 0;
+	display: flex;
+	align-items: center;
+}
+
+.menu1 li {
+	list-style-type: none;
+/*	margin-right: 25px;*/
+}
+
+li a {
+	text-decoration: none;
+	margin-right: 25px;
+	text-transform: uppercase;
+	color: #fff;
+	text-shadow: 1px 1px 1px #000;
+	transition: all 0.2s ease;
+}
+
+.menu1 li a:hover {
+/*	color: black;*/
+	text-shadow: 1px 1px 1px white;
+}
+
+.tel {
+	margin-left: auto;
+}
+
+.offer {
+	margin-top: 120px;
+	text-decoration: none;
+	color: white;
+	text-shadow: 1px 1px 1px #000;
+	margin-bottom: 283px;
+}
+
+
+.offertitle p {
+	line-height: 1;
+	margin-top: 0px;
+	margin-bottom: 50px;
+	text-transform: uppercase;
+	font-size: 70px;
+}
+
+.offertitle li {
+	list-style-type: none;
+
+}
+
+.btn {
+	display: block;
+	text-align: center;
+	vertical-align: bottom;
+	border: 1px solid #fff;
+	font-size: 40px;
+	line-height: 500px;
+	width: 600px;
+	height: 515px;
+	transition: all 0.5s ease;
+	margin-bottom: 50px;
+	margin-top: 20px;
+}
+
+.btn:hover {
+	background: white;
+	color: #000;
+	border: 1px solid #000;
+}
+
+.offer a {
+	text-decoration: none;
+	color: white;
+	text-shadow: 1px 1px 1px #000;
+}
+
+.offertitle {
+	display: flex;
+}
+
+.imgtitle {
+	margin-left: auto;
+}
+
+section {
+	padding-top: 100px;
+	font-size: 40px;
+	display: flex;
+	background-image: url("../img/phon2.jpg");
+	background-size: cover;
+}
+
+section h1 {
+	line-height: 1;
+	text-shadow: 2px 2px 2px #000;
+	margin-top: 0px;
+	margin-bottom: 50px;
+	text-transform: uppercase;
+	font-size: 50px;
+/*	color: #6C6C6C;*/
+/*	text-shadow: 1px 1px 1px #000;*/
+}
+
+section p {
+	margin-top: auto;
+	text-transform: uppercase;
+}
+
+.bottomtext {
+	list-style-type: none;
+}
+
+.menu2 {
+	padding: 0;
+	display: flex;
+/*	align-items: center;*/
+}
+
+.menu2 li {
+	list-style-type: none;
+/*	margin-right: 25px;*/
+}
+
+.page2 {
+	padding: 0;
+	list-style-type: none;
+}
+
+.section {
+	padding-bottom: 40px;
+}
+
+footer {
+	font-size: 30px;
+	display: flex;
+	background-image: url("../img/phon3.jpg");
+	background-size: cover;
+}
+h1 {
+	font-size: 100px;
+	text-shadow: 2px 2px 2px #000;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.textimg {
+	justify-content: space-between;
+	display: flex;
+	list-style-type: none;
+	text-align: justify;
+}
+
+.btn1 {
+	display: block;
+	text-align: center;
+	vertical-align: bottom;
+	border: 1px solid #fff;
+	font-size: 40px;
+	width: 755px;
+	height: 174px;
+	line-height: 170px;
+	transition: all 0.5s ease;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	margin-right: 0;
+}
+
+.imgsolo {
+	padding-left: 50px;
+}
+
+
+.arto {
+	justify-content: space-between;
+	display: flex;
+	margin:auto;
+	list-style-type: none;
+}
+
+.footr a {
+	font-family: Georgia, serif;
+	font-size: 15px;
+	text-decoration: none;
+	list-style-type: none;
+	color: white;
+}
+
+footer p {
+	margin: 0;
+}
