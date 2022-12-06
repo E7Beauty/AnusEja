@@ -16,8 +16,6 @@ const objs = [{id: 1, name: 'Alex'},
 {id: 15, name: 'Mikhail'},
 ];
 
-const getRandomColor = max => Math.floor(Math.random() * max);
-
-const newObjs = objs.map(item => ({...item, color: colors[getRandomColor(colors.length)] }) );
+const newObjs = objs.map(item => ({...item, color: colors[Math.floor(Math.random() * colors.length)] }) );
 
 newObjs.forEach(item => console.log(item));
