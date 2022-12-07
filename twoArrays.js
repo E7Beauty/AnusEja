@@ -28,6 +28,6 @@ const obj1 = [
 
 const fixTheName = name => name = name.charAt(0).toUpperCase() + name.slice(1);
 
-const resultObj = obj1.map(item => ({fullname: [fixTheName(item.first_name), fixTheName(item.second_name)].join('_'), age: item.dateOfBirthday, ifCorresponds: item.dateOfBirthday > 2003 ? true : false}) );
+const resultObj = obj1.map(item => ({fullname: fixTheName(item.first_name) + '_' + fixTheName(item.second_name), age: item.dateOfBirthday, ifCorresponds: item.dateOfBirthday > 2003}) );
 
-resultObj.forEach(item => console.log(item));
+console.log(resultObj);
