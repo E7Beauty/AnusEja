@@ -31,19 +31,17 @@ const obj1 = [
   },
 ]; 
 
-const fixTheName = name => name = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+const fixTheName = name => {return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase()};
 
 const obj2 = obj1.map(item => (fixTheName(item.first_name) + '_' + fixTheName(item.second_name) + '_' + item.dateOfBirthday));
 
 let checkArr = [];
 let resultArr =[];
-let count = 0;
 
 obj2.forEach((item, index) => {
-  if (checkArr.find(copy => copy == item) == undefined) {
-    checkArr[count] = item;
-    resultArr[count] = obj1[index];
-    count++
+  if (!checkArr.includes(item)) {
+    checkArr.push(item);
+    resultArr.push(obj1[index]);
   }
 })
 
