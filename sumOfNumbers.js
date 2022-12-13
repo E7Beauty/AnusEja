@@ -8,12 +8,11 @@ console.log('Initial array is', numbers);
 
 const getSum = ((arr, number = +prompt('Enter your number','25')) => {
   let sum = 0;
-  let index = 0;
   const arrResult = [];
   for (const item of arr) {    
     if ((sum + item) < number) {
       sum += item;
-      arrResult[index] = item;
+      arrResult.push(item);
     } else {
       break;
     }
