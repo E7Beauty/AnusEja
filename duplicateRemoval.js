@@ -31,7 +31,7 @@ const obj1 = [
   },
 ]; 
 
-const fixTheName = name => {return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase()};
+const fixTheName = name => name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
 
 const obj2 = obj1.map(item => (fixTheName(item.first_name) + '_' + fixTheName(item.second_name) + '_' + item.dateOfBirthday));
 
