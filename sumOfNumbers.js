@@ -13,10 +13,7 @@ const getSum = ((arr, number = +prompt('Enter your number','25')) => {
     if ((sum + item) < number) {
       sum += item;
       arrResult.push(item);
-    } else {
-      break;
     }
-    index++;
   }
   console.log('There are', arrResult.length, 'numbers whose sum is less than', number, 'these are:', arrResult, 'sum is:', sum);
 })
