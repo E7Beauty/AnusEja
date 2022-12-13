@@ -1,10 +1,11 @@
 let sum = 0;
 
-const getPlus = () => document.getElementById('result-one').innerHTML = ++sum;
-const getMinus = () => document.getElementById('result-one').innerHTML = --sum;
-
-document.getElementById('elementPlus').addEventListener("click", getPlus);
-document.getElementById('elementMinus').addEventListener("click", getMinus);
+document.getElementById('elementPlus').addEventListener("click", function () {
+  document.getElementById('result-one').innerHTML = ++sum;
+});
+document.getElementById('elementMinus').addEventListener("click", function () {
+  document.getElementById('result-one').innerHTML = --sum; 
+});
 
 const expandTheMachine = () => {
   document.getElementById('partone').hidden = true;
@@ -19,16 +20,16 @@ const nodeList = document.querySelectorAll('input.element');
 
 const idArray = [];
 
-nodeList.forEach((item, index) => {
-  idArray[index] = item.id.slice(5);
+nodeList.forEach(item => {
+  idArray.push(item.id.slice(5));
 });
 
 const findResult = () => document.getElementById('result');
 
-const calcTwoNumbers = (firstNumber, sign, secondNumber) => { 
-  if (firstNumber == '') {
-    firstNumber = 0;
-  }
+const calcTwoNumbers = (firstNumber, sign, secondNumber) => {
+
+  firstNumber =  firstNumber == '' ? 0 : firstNumber;
+
   switch (sign) {
     case '*':
       return +firstNumber * +secondNumber;
@@ -44,13 +45,6 @@ const calcTwoNumbers = (firstNumber, sign, secondNumber) => {
 const calcResult = () => {
 
   let resultArr = findResult().value.split(' ');
-
-
-  while (resultArr.findIndex(item => +item < 0) != -1 && resultArr.includes('')) {
-    if (resultArr.findLastIndex(item => item == '') != 0) {
-    resultArr.splice(resultArr.findLastIndex(item => +item < 0) - 1, 1);
-    }
-  } 
 
   resultArr = actions.includes(resultArr[resultArr.length - 1]) ? resultArr.slice(0, resultArr.length - 1) : resultArr; 
 
@@ -113,11 +107,7 @@ idArray.forEach((item, index) => {//adding event listeners to every button
     case ('*'):
     case ('+'):
       nodeList[index].addEventListener("click", function () {
-      if (findResult().value.length > 2 
-      && ((actions.includes(findResult().value[findResult().value.length - 2]) && findResult().value[findResult().value.length - 1] == ' ') || findResult().value[findResult().value.length - 2] != ' ') ) {
-        if (findResult().value[findResult().value.length - 1] == '-') {
-          findResult().value = '';
-        }        
+        if ( (actions.includes(findResult().value[findResult().value.length - 2])) && (findResult().value[findResult().value.length - 1] == ' ') ) {   
         findResult().value = findResult().value.slice(0, findResult().value.length - 2) + (item + ' ');
       } else {
         findResult().value += (' ' + item + ' ');
@@ -126,14 +116,13 @@ idArray.forEach((item, index) => {//adding event listeners to every button
       break;
     case ('-'):
       nodeList[index].addEventListener("click", function () { 
-        if (findResult().value[findResult().value.length - 1] == '-') {
-          findResult().value = findResult().value.slice(0, findResult().value.length - 4);
-        }
-        if ((actions.includes(findResult().value[findResult().value.length - 2]) && findResult().value[findResult().value.length - 1] == ' ') || findResult().value === '') {
+        if (findResult().value === '') {
           findResult().value += (item);
+        } else if ( (actions.includes(findResult().value[findResult().value.length - 2])) && (findResult().value[findResult().value.length - 1] == ' ') ) {
+          findResult().value = findResult().value.slice(0, findResult().value.length - 2) + (item + ' ');
         } else {
           findResult().value += (' ' + item + ' ');
-        }
+        }         
       });
       break;
     default: 
@@ -142,4 +131,3 @@ idArray.forEach((item, index) => {//adding event listeners to every button
     });    
   }
 });
-
