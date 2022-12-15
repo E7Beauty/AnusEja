@@ -1,9 +1,9 @@
 let sum = 0;
 
-document.getElementById('elementPlus').addEventListener("click", function () {
+document.getElementById('elementPlus').addEventListener("click", () => {
   document.getElementById('result-one').innerHTML = ++sum;
 });
-document.getElementById('elementMinus').addEventListener("click", function () {
+document.getElementById('elementMinus').addEventListener("click", () => {
   document.getElementById('result-one').innerHTML = --sum; 
 });
 
@@ -82,10 +82,10 @@ const calcResult = () => {
   return resultArr[0];
 }
 
-idArray.forEach((item, index) => {//adding event listeners to every button
+idArray.forEach((item, index) => {
   switch (item) {
     case ('delete'):
-      nodeList[index].addEventListener("click", function () {
+      nodeList[index].addEventListener("click", () => {
         if (findResult().value[findResult().value.length - 2] == ' ') {
           findResult().value = findResult().value.slice(0, findResult().value.length - 2);
         } else {
@@ -94,19 +94,19 @@ idArray.forEach((item, index) => {//adding event listeners to every button
       });
       break;
     case ('clear'):
-      nodeList[index].addEventListener("click", function () {
+      nodeList[index].addEventListener("click", () => {
         findResult().value = '';
       });
       break;
     case ('='):
-      nodeList[index].addEventListener("click", function () {
+      nodeList[index].addEventListener("click", () => {
         findResult().value = calcResult();
       });
       break;
     case ('/'):
     case ('*'):
     case ('+'):
-      nodeList[index].addEventListener("click", function () {
+      nodeList[index].addEventListener("click", () => {
         if ( (actions.includes(findResult().value[findResult().value.length - 2])) && (findResult().value[findResult().value.length - 1] == ' ') ) {   
         findResult().value = findResult().value.slice(0, findResult().value.length - 2) + (item + ' ');
       } else {
@@ -115,19 +115,20 @@ idArray.forEach((item, index) => {//adding event listeners to every button
     });
       break;
     case ('-'):
-      nodeList[index].addEventListener("click", function () { 
+      nodeList[index].addEventListener("click", () => { 
         if (findResult().value === '') {
-          findResult().value += (item);
-        } else if ( (actions.includes(findResult().value[findResult().value.length - 2])) && (findResult().value[findResult().value.length - 1] == ' ') ) {
-          findResult().value = findResult().value.slice(0, findResult().value.length - 2) + (item + ' ');
+         return findResult().value += item;
+        } 
+        if ( (actions.includes(findResult().value[findResult().value.length - 2])) && (findResult().value[findResult().value.length - 1] == ' ') ) {
+          return findResult().value = findResult().value.slice(0, findResult().value.length - 2) + (item + ' ');
         } else {
-          findResult().value += (' ' + item + ' ');
+          return findResult().value += (' ' + item + ' ');
         }         
       });
       break;
     default: 
-    nodeList[index].addEventListener("click", function () {
-      findResult().value = (findResult().value + item);
+    nodeList[index].addEventListener("click", () => {
+      findResult().value += item;
     });    
   }
 });
