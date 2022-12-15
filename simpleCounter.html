@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="simpleCounter.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="body">
+  <footer class="container" id="partone">
+    <div class="container__simple-counter">
+      <input id="elementPlus" type="button" value="+1" class="button button__plus">
+      <div class="container__result">
+        <span id="result-one">0</span>
+      </div>
+      <input id="elementMinus" type="button" value="-1" class="button button__minus">
+    </div>
+    <input type="button" id="more" class="more button" value="More">
+
+  </footer>
+  <section class="section" id="parttwo" hidden=true>
+    <div class="calculator">
+      <div class="calculator__row row">
+        <input type="button" value="" id="result" class="result row__element">
+        <input type="button" value="delete" id="calc_delete" class="row__element element">
+      </div>
+      <div class="calculator__row row">
+        <input type="button" value="7" id="calc_7" class="row__element element">
+        <input type="button" value="8" id="calc_8" class="row__element element">
+        <input type="button" value="9" id="calc_9" class="row__element element">
+        <input type="button" value="C" id="calc_clear" class="row__element element">
+      </div>
+      <div class="calculator__row row">
+        <input type="button" value="4" id="calc_4" class="row__element element">
+        <input type="button" value="5" id="calc_5" class="row__element element">
+        <input type="button" value="6" id="calc_6" class="row__element element">
+        <input type="button" value="+" id="calc_+" class="row__element element">
+      </div>
+      <div class="calculator__row row">
+        <input type="button" value="1" id="calc_1" class="row__element element">
+        <input type="button" value="2" id="calc_2" class="row__element element">
+        <input type="button" value="3" id="calc_3" class="row__element element">
+        <input type="button" value="-" id="calc_-" class="row__element element">
+
+      </div>
+      <div class="calculator__row row">
+        <input type="button" value="0" id="calc_0" class="row__element element">
+        <input type="button" value="÷" id="calc_/" class="row__element element">
+        <input type="button" value="×" id="calc_*" class="row__element element">
+        <input type="button" value="=" id="calc_=" class="row__element element">
+      </div>
+    </div>
+
+  </section>
+  <script src="simpleCounter.js"></script>
+</body>
+
+</html>
