@@ -1,0 +1,100 @@
+body {
+  background-color: black;
+  font-family: 'Montserrat', sans-serif;
+}
+
+button {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.todolist {
+  border: 1px solid #fa1e3e;
+  background-color: #222;
+  padding: 10px;
+  height: 500px;
+  width: 700px;
+  display: grid;
+}
+
+.todolist__container {
+  width: 700px;
+  display: grid;
+}
+
+.todolist__input {
+  margin-top: auto;
+  display: flex;
+  align-items: baseline;
+}
+
+.container__element {
+  margin-bottom: auto;
+  display: flex;
+  max-height: 100px;
+}
+
+.element__note {
+  max-height: 50px;
+  max-width: 630px;
+  width: 630px;
+  display: block;
+  border: 1px solid #fa1e3e;
+  background: #717171;
+}
+
+.element__action {
+  padding-left: 10px;
+  display: grid;
+  max-height: 52px;
+}
+
+.button {
+  display: block;
+  border: 1px solid #fa1e3e;
+  width: 60px;
+  background-color: #717171;
+  transition: all 0.2s ease;
+}
+
+.action__button {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.note__text {
+  display: flex;
+  padding: 5px;
+  font-family: 'Montserrat', sans-serif;
+  height: 40px;
+}
+
+.action__delete {
+  margin-top: auto;
+}
+
+.input__text {
+  padding: 5px;
+  border: 1px solid #fa1e3e;
+  display: flex;
+  max-width: 630px;
+  width: 620px;
+  height: 20px;
+  background-color: #222;
+}
+
+.input__text:focus {
+  outline: none;
+  border: 1px solid #fa1e3e;
+  background-color: #fff;
+}
+
+.input__submit {
+  margin-left: 10px;
+  height: 32px;
+}
+
+.button:hover {
+  color: #222;
+  background-color: #fa1e3e;
+  border: 1px solid white;
+}
