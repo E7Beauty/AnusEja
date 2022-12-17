@@ -18,6 +18,7 @@ button {
 
 .todolist__container {
   width: 700px;
+  height: 100px;
   display: grid;
 }
 
@@ -29,6 +30,7 @@ button {
 
 .container__element {
   margin-bottom: auto;
+  margin-bottom: 20px;
   display: flex;
   max-height: 100px;
 }
@@ -38,7 +40,7 @@ button {
   max-width: 630px;
   width: 630px;
   display: block;
-  border: 1px solid #fa1e3e;
+  /* border: 1px solid #fa1e3e; */
   background: #717171;
 }
 
@@ -56,6 +58,12 @@ button {
   transition: all 0.2s ease;
 }
 
+.note__button {
+  height: 20px;
+  display: flex;
+  visibility: hidden;
+}
+
 .action__button {
   margin-right: auto;
   margin-left: auto;
@@ -66,6 +74,18 @@ button {
   padding: 5px;
   font-family: 'Montserrat', sans-serif;
   height: 40px;
+  background-color: #717171;
+  box-shadow: none;
+  width: 620px;
+  border: 1px solid #fa1e3e;
+  color: black;
+  font-size: 15px;
+}
+
+.note__text:focus {
+  outline: none;
+  border: 1px solid #fa1e3e;
+  background-color: #fff;
 }
 
 .action__delete {
