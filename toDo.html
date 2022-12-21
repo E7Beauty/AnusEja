@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="toDo.css">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <footer>
+    <div class="todolist">
+      <div class="container todolist__container">
+        <div class="element container__element" id="first">
+          <div class="element__note note">
+            <div class="note_group">
+              <input type="text" class="note__input" value="element1"></input>
+              <span class="note__text">element1</span>
+            </div>
+            <div class="note__button">
+              <button class="button note__button">Apply</button>
+              <button class="button note__button">Discard</button>
+            </div>
+          </div>
+          <div class="action element__action">
+            <button class="action__edit edit button action__button">Edit</button>
+            <button class="action_delete delete button action__button">Delete</button>
+          </div>
+        </div>
+      </div>
+      <div class="input todolist__input">
+        <input type="text" class="input__text text">
+        <button class="input__submit submit button">Submit</button>
+      </div>
+    </div>
+    <button class="button clearlocalstorage">clear local storage</button>
+    <script src="toDo.js"></script>
+  </footer>
+</body>
+
+</html>
