@@ -1,0 +1,38 @@
+.container {
+    max-width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 800px;
+    max-height: 1000px;
+}
+
+.container__content {
+    display: grid;
+    height: 700px;
+}
+
+.container__pages {
+    width: 300px;
+    display: flex;
+    margin-top: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.pages__button {
+    margin-right: 10px;
+
+}
+
+.pages__button_active {
+    color: white;
+    background-color: grey;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+.content__text {
+    margin-bottom: 10px;
+}
