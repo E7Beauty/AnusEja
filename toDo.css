@@ -82,6 +82,19 @@ button {
   font-size: 15px;
 }
 
+.note__input {
+  display: flex;
+  padding: 5px;
+  font-family: 'Montserrat', sans-serif;
+  height: 40px;
+  background-color: #717171;
+  box-shadow: none;
+  width: 620px;
+  border: 1px solid #fa1e3e;
+  color: black;
+  font-size: 15px;
+}
+
 .note__text:focus {
   outline: none;
   border: 1px solid #fa1e3e;
